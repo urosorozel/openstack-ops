@@ -85,7 +85,7 @@ fi
 
 rm -rf /opt/openstack-ansible
 test "$rpc_config_inplace" = true || git clone -o template -b ${RPCO_CONFIG_BRANCH} https://github.com/rpc-environments/RPCO-OSA-Template /opt/rpc-config
-git clone -b "$OSA_RELEASE" https://opendev.org/openstack/openstack-ansible /opt/openstack-ansible
+git clone -b "$OSA_RELEASE" https://github.com/urosorozel/openstack-ansible /opt/openstack-ansible
 
 if [ "$rpc_config_inplace" = false ]; then
   cp -r /opt/rpc-config/global /opt/rpc-config/$OSA_ENV_LCASE
